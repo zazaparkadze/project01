@@ -17,7 +17,7 @@ export default function ProfileCard({ empl }: Prop) {
         width={225}
         height={225}
         alt="flowers"
-        className="block rounded-full border-5 border-double border-amber-300"
+        className="block rounded-full border-5 border-double border-amber-300 aspect-square"
       ></Image>
       <p className="text-3xl">{empl.name}</p>
       <p className="text-2xl">{empl.occupation}</p>
