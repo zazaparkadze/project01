@@ -7,6 +7,7 @@ type Prop = {
 export default function ProfileCard({ empl }: Prop) {
   const content = (
     <div
+      id={empl.name}
       className="flex flex-col justify-center gap-3 items-center border-2 
     border-amber-500 text-center text-amber-400 rounded-3xl shadow-xl
      shadow-amber-300 w-[375px] h-[425px]  md:last:order-[-1] lg:even:order-[-1]
