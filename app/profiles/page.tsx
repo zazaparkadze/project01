@@ -17,7 +17,7 @@ export default function Profiles() {
           </span>
         ))}
       </h1>
-      <main className="flex flex-col flex-grow-1 justify-center items-center gap-6 bg-slate-500 md:flex-row md:justify-evenly ">
+      <main className="flex flex-col flex-grow-1 justify-center items-center gap-6 bg-slate-500 md:flex-row md:flex-wrap">
         {employees.map((emp) => (
           <ProfileCard empl={emp} key={employees.indexOf(emp)} />
         ))}
