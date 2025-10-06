@@ -44,7 +44,7 @@ export default async function pageTodos({ params }: Params) {
       {todos.map((todo) => (
         <section
           key={todo.id}
-          className="[&>*:nth-child(2)]:text-red-500 w-[50vw] flex flex-col"
+          className="[&>*:nth-child(2)]:text-red-500 w-[70vw] flex flex-col"
         >
           <p className="text-amber-300 bg-green-600 text-center text-3xl">
             {todo.id}
@@ -53,8 +53,8 @@ export default async function pageTodos({ params }: Params) {
           <p
             className={clsx(
               {
-                "text-gray-500 text-2xl": todo.completed === false,
-                "text-green-700 text-2xl": todo.completed === true,
+                "text-gray-900 text-2xl font-bold": todo.completed === false,
+                "text-green-700 text-2xl font-bold": todo.completed === true,
               },
               "bg-amber-500 whitespace-nowrap overflow-x-hidden overflow-ellipsis text-center"
             )}
