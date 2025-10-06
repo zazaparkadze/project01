@@ -46,15 +46,15 @@ export default async function pageTodos({ params }: Params) {
           key={todo.id}
           className="[&>*:nth-child(2)]:text-red-500 w-[70vw] flex flex-col"
         >
-          <p className="text-amber-300 bg-green-600 text-center text-3xl">
+          <p className="text-amber-300 bg-transparent text-center text-2xl">
             {todo.id}
           </p>
-          <p>{todo.title}</p>
+          <p className="text-2xl">Title: {todo.title} </p>
           <p
             className={clsx(
               {
-                "text-gray-900 text-2xl font-bold": todo.completed === false,
-                "text-green-700 text-2xl font-bold": todo.completed === true,
+                "text-white text-2xl font-bold": todo.completed === false,
+                "text-fuchsia-900 text-2xl font-bold": todo.completed === true,
               },
               "bg-amber-500 whitespace-nowrap overflow-x-hidden overflow-ellipsis text-center"
             )}
