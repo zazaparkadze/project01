@@ -2,5 +2,6 @@
     { "name": "Zaza", "occupation": "Mathematician" },
     { "name": "Mishka", "occupation": "Founder, CEO" },
     { "name": "Dasha", "occupation": "Founder, CTO" },
-    { "name": "Tusia", "occupation": "Coder" }
+    { "name": "Tusia", "occupation": "Coder" },
+    { "name": "Gega", "occupation": "Founder" }
   ]

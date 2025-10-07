@@ -7,7 +7,6 @@ type Props = {
 };
 
 export default function Home({ filename }: Props) {
-  console.log(filename);
   return (
     <button
       className={clsx(

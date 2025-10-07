@@ -1,10 +1,18 @@
 import React from "react";
 import Image from "next/image";
+import sharpResize from "@/lib/sharpResize";
+import { readdirSync, existsSync } from "fs";
 
 type Prop = {
   empl: Employee;
 };
-export default function ProfileCard({ empl }: Prop) {
+export default async function ProfileCard({ empl }: Prop) {
+  const fileNames = readdirSync("./public/employees");
+  fileNames.map((name) => {
+    !existsSync(`./public/${name}`) &&
+      sharpResize(`./public/employees/${name}`);
+  });
+
   const content = (
     <div
       id={empl.name}
@@ -14,9 +22,9 @@ export default function ProfileCard({ empl }: Prop) {
       lg:[&:nth-child(3)]:bg-gray-400 shrink-0"
     >
       <Image
-        src={`/employees/${empl.name}.jpeg`}
-        width={225}
-        height={225}
+        src={`/${empl.name}.jpeg`}
+        width={232}
+        height={232}
         alt="flowers"
         className="block rounded-full border-5 border-double border-amber-300 aspect-square"
       ></Image>
